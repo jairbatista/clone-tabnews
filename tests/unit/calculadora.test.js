@@ -10,7 +10,7 @@ test("somar 5 + 100 deveria retornar 105", () => {
   expect(resultado).toBe(105);
 });
 
-test("somar 'banana' + 100 deveria retornar 'Erro'", () => {
+test("somar 'banana' + 100 deveria retornar `NaN`", () => {
   const resultado = calculadora.somar("banana", 100);
   expect(resultado).toBe(NaN);
 });

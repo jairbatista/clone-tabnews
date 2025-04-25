@@ -1,7 +1,14 @@
 services:
-  database:
-    image: "postgres:16.8-alpine3.21"
+  postgres16:
+    image: postgres:16.8-alpine3.21
     env_file:
       - ../.env.development
+    container_name: postgres16_clone_tabnews
     ports:
-      - "5432:5432"
+      - "5433:5432"
+    environment:
+      POSTGRES_HOST: postgres16
+      POSTGRES_PORT: 5433
+      POSTGRES_USER: user16
+      POSTGRES_DB: db16
+      POSTGRES_PASSWORD: pass16

@@ -1,5 +1,7 @@
+const appPort = process.env.APP_PORT;
+
 test("GET to /api/v1/status should return 200", async () => {
-  const response = await fetch(`http://localhost:3011/api/v1/status`);
+  const response = await fetch(`http://localhost:${appPort}/api/v1/status`);
   expect(response.status).toBe(200);
 
   // responseBody
